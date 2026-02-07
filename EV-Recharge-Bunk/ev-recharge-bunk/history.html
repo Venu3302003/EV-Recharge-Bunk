@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Booking History</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<nav class="navbar">
+    <h2>📜 Booking History</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="booking.html">Book Slot</a>
+        <a href="history.html">History</a>
+        <button onclick="toggleTheme()">🌙</button>
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+</nav>
+
+
+<div id="bookingHistory"></div>
+
+
+<!-- Firebase v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- Your Firebase Config -->
+<script src="js/firebase-config.js"></script>
+
+
+<script src="js/history.js"></script>
+<div class="history-container" id="historyContainer"></div>
+<div id="bookingHistory"></div>
+ 
+<script src="js/theme.js"></script>
+
+
+</body>
+</html>

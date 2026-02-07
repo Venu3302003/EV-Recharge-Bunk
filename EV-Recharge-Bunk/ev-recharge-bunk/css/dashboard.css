@@ -1,0 +1,86 @@
+#map {
+    height: 85vh;
+    border-radius: 12px;
+    margin: 15px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    box-sizing: border-box;
+    background: rgba(255,255,255,0.1);
+    color: white;
+}
+input:focus {
+    outline: none;
+    box-shadow: 0 0 8px #00f2fe;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: rgba(255,255,255,0.1);
+    box-shadow: 0 0 15px rgba(0,0,0,0.3);
+}
+.nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: 0.3s ease;
+    
+}
+.nav a:hover {
+    background: #00e6ff;
+}
+.nav-links {
+    position: relative;
+
+}
+
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 40px;
+}
+.dashboard-buttons {
+   position: absolute;
+   top: 90px;
+   left: 20px;
+   z-index: 9999;
+   display: flex;
+   flex-direction: column;
+   gap: 12px;
+}
+.dashboard-buttons button {
+    padding: 10px 16px;
+    border-radius: 8px;
+    border: none;
+    font-size: 14px;
+    font-weight: 600;
+    color: white;
+    background: linear-gradient(135deg,#00e6ff,#007bff);
+    box-shadow: 0 0 15px #00e6ff;
+    transition: 0.3s ease;
+}
+.dashboard-buttons button:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 25px #00e6ff;
+}
+.leaflet-popup-content-wrapper {
+    border-radius: 10px;
+    background: #1e2a38;
+    color: white;
+}
+.leaflet-popup-tip{
+    background: #1e2a38;
+}

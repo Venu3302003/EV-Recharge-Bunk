@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin Panel | EV Recharge Hub</title>
+    <link rel="stylesheet" href="css/admin.css">
+</head>
+
+<body>
+<nav class="navbar">
+    <h2>⚡ EV Recharge Hub</h2>
+    <div>
+        <a href="index.html">Home</a>
+        <a href="dashboard.html">Dashboard</a>
+        <a href="booking.html">Book Slot</a>
+        <a href="history.html">History</a>
+        <button onclick="toggleTheme()">🌙</button>
+        <button onclick="logoutUser()">Logout</button>
+    </div>
+</nav>
+
+
+<div class="admin-topbar">
+    <h2>⚡ Admin Dashboard</h2>
+    <div>
+        
+        <button onclick="showBookings()">All Bookings</button>
+        
+    </div>
+</div>
+
+<div id="dashboardSection" class="admin-section">
+    <h3>📊 Overview</h3>
+    <div class="stats-grid">
+        <div class="stat-card">Total Bookings<br><span id="totalBookings">0</span></div>
+        <div class="stat-card">Approved<br><span id="approvedCount">0</span></div>
+        <div class="stat-card">Cancelled<br><span id="cancelledCount">0</span></div>
+    </div>
+</div>
+
+<div id="bookingsSection" class="admin-section" style="display:none;">
+    <h3>📋 All Bookings</h3>
+    <div id="adminBookingsContainer" class="booking-grid"></div>
+</div>
+
+<!-- ONLY FIREBASE v8 -->
+<!-- Firebase v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- Your Firebase Config -->
+<script src="js/firebase-config.js"></script>
+
+
+
+<script src="js/admin.js"></script>
+<script src="js/theme.js"></script>
+
+
+</body>
+</html>

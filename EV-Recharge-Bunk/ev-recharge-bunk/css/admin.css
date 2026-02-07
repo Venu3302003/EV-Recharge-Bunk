@@ -1,0 +1,190 @@
+/* ===== PAGE BASE ===== */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+    color: white;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.6);
+    backdrop-filter: blur(10px);
+}
+
+.navbar h2 {
+    margin: 0;
+    color: #00e6ff;
+}
+
+.navbar a,
+.navbar button {
+    margin-left: 18px;
+    text-decoration: none;
+    color: white;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar a:hover,
+.navbar button:hover {
+    color: #00e6ff;
+}
+
+/* ===== ADMIN TOP BAR ===== */
+.admin-topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 50px 10px;
+}
+
+.admin-topbar h2 {
+    margin: 0;
+}
+
+.admin-topbar button {
+    padding: 8px 16px;
+    margin-left: 10px;
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: white;
+    transition: 0.3s;
+}
+
+.admin-topbar button:hover {
+    transform: translateY(-2px);
+}
+
+/* Logout special color */
+.logout-btn {
+    background: linear-gradient(135deg, #ff4b2b, #ff416c);
+}
+
+/* ===== SECTIONS ===== */
+.admin-section {
+    padding: 20px 50px;
+}
+
+/* ===== STATS CARDS ===== */
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.stat-card {
+    background: rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+    padding: 20px;
+    border-radius: 12px;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.stat-card span {
+    display: block;
+    margin-top: 8px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00e6ff;
+}
+
+/* ===== BOOKINGS GRID ===== */
+.booking-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+/* ===== BOOKING CARD ===== */
+.booking-card {
+    background: #111827;
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.4);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booking-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.6);
+}
+
+.booking-card h4 {
+    margin: 0 0 8px;
+    color: #38bdf8;
+}
+
+.booking-card p {
+    margin: 5px 0;
+    font-size: 13px;
+}
+
+/* Status Colors */
+.status-approved {
+    color: #22c55e;
+    font-weight: bold;
+}
+
+.status-cancelled {
+    color: #ef4444;
+    font-weight: bold;
+}
+/* ===== ADMIN ACTION BUTTONS ===== */
+.booking-card button {
+    padding: 6px 12px;
+    margin-right: 6px;
+    border-radius: 6px;
+    border: none;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+/* APPROVE BUTTON */
+.booking-card button:nth-child(1) {
+    background: #22c55e; /* Green */
+    color: white;
+}
+
+.booking-card button:nth-child(1):hover {
+    background: #16a34a;
+    transform: scale(1.05);
+}
+
+/* CANCEL BUTTON */
+.booking-card button:nth-child(2) {
+    background: #ef4444; /* Red */
+    color: white;
+}
+
+.booking-card button:nth-child(2):hover {
+    background: #dc2626;
+    transform: scale(1.05);
+}
+
+/* DELETE BUTTON */
+.booking-card button:nth-child(3) {
+    background: #111111; /* Black */
+    color: white;
+}
+
+.booking-card button:nth-child(3):hover {
+    background: #000000;
+    transform: scale(1.05);
+}

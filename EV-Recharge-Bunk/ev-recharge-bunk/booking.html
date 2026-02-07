@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Slot Booking | EV Recharge Hub</title>
+    <link rel="stylesheet" href="css/booking.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- 🌐 NAVBAR -->
+    <nav class="navbar">
+        <h2>⚡ EV Recharge Hub</h2>
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="history.html">History</a>
+            <button onclick="toggleTheme()">🌙</button>
+            <button onclick="logoutUser()">Logout</button>
+        </div>
+    </nav>
+
+    <!-- ⚡ BOOKING SECTION -->
+    <h2 class="booking-title">⚡ Book Charging Slot</h2>
+    <div class="booking-container">
+         
+     
+
+        <form id="bookingForm" class="booking-form">
+
+            <!-- 🚉 Select Station -->
+            <label>Choose Station</label>
+            <select id="station" required>
+                <option value="">Select Station</option>
+                <option>Madhapur Station</option>
+                <option>Gachibowli Station</option>
+                <option>Kukatpally Station</option>
+                <option>Secunderabad Station</option>
+                <option>Begumpet Station</option>
+                <option>Ameerpet Station</option>
+                <option>Hitech City Station</option>
+                <option>Uppal Station</option>
+                <option>Miyapur Station</option>
+                <option>Jubilee Hills Station</option>
+
+            </select>
+
+            <!-- 📅 Select Date -->
+            <label>Select Date</label>
+            <input type="date" id="date" required>
+
+            <!-- ⏰ Select Time Slot -->
+            <label>Select Time Slot</label>
+            <select id="time" required>
+                <option value="">Select Time Slot</option>
+            </select>
+
+            <!-- 💳 Fake Payment Mode -->
+            <label>Payment Method</label>
+            <select id="payment" required>
+                <option value="">Select Payment</option>
+                <option>UPI</option>
+                <option>Credit Card</option>
+                <option>Wallet</option>
+            </select>
+
+            <!-- 🔘 Submit Button -->
+            <button type="submit">Confirm Booking ⚡</button>
+
+
+        </form>
+    </div>
+
+    <!-- ✅ Success Popup -->
+    <div id="successPopup" class="popup hidden">
+        <div class="popup-box">
+            <h3>✅ Booking Confirmed!</h3>
+            <p>Your charging slot has been booked successfully.</p>
+            <button onclick="closePopup()">OK</button>
+        </div>
+    </div>
+
+    <!-- 🔌 Scripts -->
+    <!-- Firebase Libraries FIRST -->
+<!-- Firebase v8 -->
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-firestore.js"></script>
+
+<!-- Your Firebase Config -->
+<script src="js/firebase-config.js"></script>
+
+
+<!-- Then Your App Scripts -->
+<script src="js/auth.js"></script>
+<script src="js/booking.js"></script>
+<script src="js/theme.js"></script>
+</body>
+
+</html>
